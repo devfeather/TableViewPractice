@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3053F2CB215A80910069A72A /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F2CA215A80910069A72A /* MainItem.swift */; };
 		30B403BE215A619500816068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B403BD215A619500816068 /* AppDelegate.swift */; };
-		30B403C0215A619500816068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B403BF215A619500816068 /* ViewController.swift */; };
+		30B403C0215A619500816068 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B403BF215A619500816068 /* MainViewController.swift */; };
 		30B403C3215A619500816068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B403C1215A619500816068 /* Main.storyboard */; };
 		30B403C5215A619600816068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30B403C4215A619600816068 /* Assets.xcassets */; };
 		30B403C8215A619600816068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30B403C6215A619600816068 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3053F2CA215A80910069A72A /* MainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItem.swift; sourceTree = "<group>"; };
 		30B403BA215A619500816068 /* TableViewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30B403BD215A619500816068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30B403BF215A619500816068 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30B403BF215A619500816068 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		30B403C2215A619500816068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30B403C4215A619600816068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30B403C7215A619600816068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +37,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3053F2C9215A651D0069A72A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3053F2CA215A80910069A72A /* MainItem.swift */,
+				30B403BF215A619500816068 /* MainViewController.swift */,
+				30B403C1215A619500816068 /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		3053F2CC215A83EA0069A72A /* Single Section */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Single Section";
+			sourceTree = "<group>";
+		};
 		306F5C28215A638D00A6B64C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,8 +84,8 @@
 		30B403BC215A619500816068 /* TableViewPractice */ = {
 			isa = PBXGroup;
 			children = (
-				30B403BF215A619500816068 /* ViewController.swift */,
-				30B403C1215A619500816068 /* Main.storyboard */,
+				3053F2C9215A651D0069A72A /* Main */,
+				3053F2CC215A83EA0069A72A /* Single Section */,
 				306F5C28215A638D00A6B64C /* Support Files */,
 			);
 			path = TableViewPractice;
@@ -143,7 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30B403C0215A619500816068 /* ViewController.swift in Sources */,
+				30B403C0215A619500816068 /* MainViewController.swift in Sources */,
+				3053F2CB215A80910069A72A /* MainItem.swift in Sources */,
 				30B403BE215A619500816068 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
