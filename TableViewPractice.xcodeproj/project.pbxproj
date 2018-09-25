@@ -35,6 +35,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		306F5C28215A638D00A6B64C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				30B403BD215A619500816068 /* AppDelegate.swift */,
+				30B403C4215A619600816068 /* Assets.xcassets */,
+				30B403C6215A619600816068 /* LaunchScreen.storyboard */,
+				30B403C9215A619600816068 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
 		30B403B1215A619500816068 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +65,9 @@
 		30B403BC215A619500816068 /* TableViewPractice */ = {
 			isa = PBXGroup;
 			children = (
-				30B403BD215A619500816068 /* AppDelegate.swift */,
 				30B403BF215A619500816068 /* ViewController.swift */,
 				30B403C1215A619500816068 /* Main.storyboard */,
-				30B403C4215A619600816068 /* Assets.xcassets */,
-				30B403C6215A619600816068 /* LaunchScreen.storyboard */,
-				30B403C9215A619600816068 /* Info.plist */,
+				306F5C28215A638D00A6B64C /* Support Files */,
 			);
 			path = TableViewPractice;
 			sourceTree = "<group>";
@@ -283,7 +291,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TableViewPractice/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TableViewPractice/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +309,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TableViewPractice/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/TableViewPractice/Support Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
