@@ -6,27 +6,28 @@
 //  Copyright © 2018 Feather. All rights reserved.
 //
 
-struct MainItem {
-    enum SectionKind {
+struct TableKind {
+    enum SectionType {
         case single, multiple
         var text: String {
             switch self {
-            case .single: return "Single Section"
-            case .multiple: return "Multiple Section"
+            case .single: return "Single"
+            case .multiple: return "Multiple"
             }
         }
     }
     
-    enum ItemKind {
+    enum ItemType {
         case same, other
         var text: String {
             switch self {
-            case .same: return "Same Items"
-            case .other: return "Other Items"
+            case .same: return "Same"
+            case .other: return "Other"
             }
         }
     }
     
-    let sectionKind: SectionKind
-    let itemKind: ItemKind
+    let title: String
+    let sectionType: SectionType
+    let itemType: ItemType
 }

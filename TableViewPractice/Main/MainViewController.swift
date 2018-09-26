@@ -10,14 +10,17 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    private let cellID = "MainCell"
-    private var dataSource: [MainItem] = [MainItem(sectionKind: .single, itemKind: .same),
-                                          MainItem(sectionKind: .single, itemKind: .other),
-                                          MainItem(sectionKind: .multiple, itemKind: .same),
-                                          MainItem(sectionKind: .multiple, itemKind: .other)]
+    private var dataSource: [TableKind] = [TableKind(title: "Basic", sectionType: .single, itemType: .same),
+                                          TableKind(title: "Menu Table", sectionType: .multiple, itemType: .same),
+                                          TableKind(title: "Setting", sectionType: .multiple, itemType: .other)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerCell()
+    }
+    
+    private func registerCell() {
+        tableView.register(TableKindTableViewCell.nib, forCellReuseIdentifier: TableKindTableViewCell.identifier)
     }
 }
 
@@ -27,14 +30,34 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
-        let item = dataSource[indexPath.row]
-        cell.textLabel?.text = "\(item.sectionKind.text) of \(item.itemKind.text)"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableKindTableViewCell.identifier, for: indexPath) as? TableKindTableViewCell else {
+            return UITableViewCell()
+        }
+        let kind = dataSource[indexPath.row]
+        cell.setup(kind: kind)
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        return TableKindTableViewCell.height
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let kind = dataSource[indexPath.row]
+        let vc: UIViewController
+        
+        switch (kind.sectionType, kind.itemType) {
+        case (TableKind.SectionType.single, TableKind.ItemType.same):
+            let storyboard = UIStoryboard(name: "SingleSection", bundle: nil)
+            vc = storyboard.instantiateViewController(withIdentifier: "SingleSectionSameItemsViewController")
+            
+        case (TableKind.SectionType.multiple, TableKind.ItemType.same): return
+        case (TableKind.SectionType.multiple, TableKind.ItemType.other): return
+
+        default: return
+        }
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
