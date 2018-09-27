@@ -55,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		301ADA56215CC4F400D7059E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				302A1423215AA1D100E578DC /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		302A1423215AA1D100E578DC /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,18 +104,10 @@
 		3053F2CC215A83EA0069A72A /* Single Section */ = {
 			isa = PBXGroup;
 			children = (
-				3053F2CD215A84A30069A72A /* Same Items */,
+				3053F2CE215A85330069A72A /* SingleSectionSameItemsViewController.swift */,
 				3053F2D0215A856B0069A72A /* SingleSection.storyboard */,
 			);
 			path = "Single Section";
-			sourceTree = "<group>";
-		};
-		3053F2CD215A84A30069A72A /* Same Items */ = {
-			isa = PBXGroup;
-			children = (
-				3053F2CE215A85330069A72A /* SingleSectionSameItemsViewController.swift */,
-			);
-			path = "Same Items";
 			sourceTree = "<group>";
 		};
 		306F5C28215A638D00A6B64C /* Support Files */ = {
@@ -149,10 +149,10 @@
 		30B403BC215A619500816068 /* TableViewPractice */ = {
 			isa = PBXGroup;
 			children = (
+				302A142D215AA5AD00E578DC /* Extension */,
+				301ADA56215CC4F400D7059E /* Common */,
 				3053F2C9215A651D0069A72A /* Main */,
 				3053F2CC215A83EA0069A72A /* Single Section */,
-				302A1423215AA1D100E578DC /* View */,
-				302A142D215AA5AD00E578DC /* Extension */,
 				306F5C28215A638D00A6B64C /* Support Files */,
 			);
 			path = TableViewPractice;
