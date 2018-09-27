@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301ADA52215CC0F900D7059E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301ADA51215CC0F900D7059E /* NibLoadable.swift */; };
+		301ADA54215CC11800D7059E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301ADA53215CC11800D7059E /* Reusable.swift */; };
 		302A1426215AA24600E578DC /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A1424215AA24600E578DC /* BasicTableViewCell.swift */; };
 		302A1427215AA24600E578DC /* BasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302A1425215AA24600E578DC /* BasicTableViewCell.xib */; };
-		302A142C215AA54A00E578DC /* UITableViewCell+Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A142B215AA54A00E578DC /* UITableViewCell+Nibable.swift */; };
+		302A142C215AA54A00E578DC /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302A142B215AA54A00E578DC /* UITableView+Reusable.swift */; };
 		3053F2CB215A80910069A72A /* TableKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F2CA215A80910069A72A /* TableKind.swift */; };
 		3053F2CF215A85330069A72A /* SingleSectionSameItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3053F2CE215A85330069A72A /* SingleSectionSameItemsViewController.swift */; };
 		3053F2D1215A856B0069A72A /* SingleSection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3053F2D0215A856B0069A72A /* SingleSection.storyboard */; };
@@ -23,9 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		301ADA51215CC0F900D7059E /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		301ADA53215CC11800D7059E /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		302A1424215AA24600E578DC /* BasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
 		302A1425215AA24600E578DC /* BasicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasicTableViewCell.xib; sourceTree = "<group>"; };
-		302A142B215AA54A00E578DC /* UITableViewCell+Nibable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Nibable.swift"; sourceTree = "<group>"; };
+		302A142B215AA54A00E578DC /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		3053F2CA215A80910069A72A /* TableKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableKind.swift; sourceTree = "<group>"; };
 		3053F2CE215A85330069A72A /* SingleSectionSameItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSectionSameItemsViewController.swift; sourceTree = "<group>"; };
 		3053F2D0215A856B0069A72A /* SingleSection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SingleSection.storyboard; sourceTree = "<group>"; };
@@ -51,13 +55,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		302A1421215AA11700E578DC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		302A1423215AA1D100E578DC /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +75,9 @@
 		302A142D215AA5AD00E578DC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				302A142B215AA54A00E578DC /* UITableViewCell+Nibable.swift */,
+				301ADA51215CC0F900D7059E /* NibLoadable.swift */,
+				301ADA53215CC11800D7059E /* Reusable.swift */,
+				302A142B215AA54A00E578DC /* UITableView+Reusable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -106,7 +105,6 @@
 		3053F2CD215A84A30069A72A /* Same Items */ = {
 			isa = PBXGroup;
 			children = (
-				302A1421215AA11700E578DC /* Model */,
 				3053F2CE215A85330069A72A /* SingleSectionSameItemsViewController.swift */,
 			);
 			path = "Same Items";
@@ -235,7 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				30B403C0215A619500816068 /* MainViewController.swift in Sources */,
-				302A142C215AA54A00E578DC /* UITableViewCell+Nibable.swift in Sources */,
+				301ADA52215CC0F900D7059E /* NibLoadable.swift in Sources */,
+				302A142C215AA54A00E578DC /* UITableView+Reusable.swift in Sources */,
+				301ADA54215CC11800D7059E /* Reusable.swift in Sources */,
 				30A65D00215B3F0800B4EF64 /* TableKindTableViewCell.swift in Sources */,
 				3053F2CB215A80910069A72A /* TableKind.swift in Sources */,
 				30B403BE215A619500816068 /* AppDelegate.swift in Sources */,
