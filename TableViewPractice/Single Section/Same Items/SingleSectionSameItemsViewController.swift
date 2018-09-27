@@ -17,24 +17,23 @@ class SingleSectionSameItemsViewController: UIViewController {
     }
     
     private func registerCell() {
-        tableView.register(BasicTableViewCell.nib, forCellReuseIdentifier: BasicTableViewCell.identifier)
+        tableView.register(BasicTableViewCell.self)
     }
 }
 
-extension SingleSectionSameItemsViewController: UITableViewDataSource, UITableViewDelegate {
+extension SingleSectionSameItemsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: BasicTableViewCell.identifier, for: indexPath) as? BasicTableViewCell else {
-            return UITableViewCell()
-        }
-        
+        let cell: BasicTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         cell.titleLabel.text = "Hello"
         return cell
     }
-    
+}
+
+extension SingleSectionSameItemsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }

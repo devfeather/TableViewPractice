@@ -20,24 +20,24 @@ class MainViewController: UIViewController {
     }
     
     private func registerCell() {
-        tableView.register(TableKindTableViewCell.nib, forCellReuseIdentifier: TableKindTableViewCell.identifier)
+        tableView.register(TableKindTableViewCell.self)
     }
 }
 
-extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TableKindTableViewCell.identifier, for: indexPath) as? TableKindTableViewCell else {
-            return UITableViewCell()
-        }
+        let cell: TableKindTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         let kind = dataSource[indexPath.row]
         cell.setup(kind: kind)
         return cell
     }
-    
+}
+
+extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return TableKindTableViewCell.height
     }
@@ -53,7 +53,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             
         case (TableKind.SectionType.multiple, TableKind.ItemType.same): return
         case (TableKind.SectionType.multiple, TableKind.ItemType.other): return
-
+            
         default: return
         }
         

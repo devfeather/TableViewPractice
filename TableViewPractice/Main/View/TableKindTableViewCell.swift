@@ -30,3 +30,5 @@ class TableKindTableViewCell: UITableViewCell {
     }
     
 }
+
+extension TableKindTableViewCell: NibLoadable { }

@@ -11,3 +11,5 @@ import UIKit
 class BasicTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
 }
+
+extension BasicTableViewCell: NibLoadable { }
