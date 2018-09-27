@@ -1,0 +1,17 @@
+[
+   {
+      "title":"Basic Table",
+      "sectionType":0,
+      "itemType":0,
+   },
+   {
+      "title":"Menu Table",
+      "sectionType":1,
+      "itemType":0,
+   }
+   {
+      "title":"Setting Table",
+      "sectionType":1,
+      "itemType":2,
+   }
+]
