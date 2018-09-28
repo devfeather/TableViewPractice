@@ -1,5 +1,5 @@
 //
-//  SingleSectionSameItemsViewController.swift
+//  ContactViewController.swift
 //  TableViewPractice
 //
 //  Created by Feather on 26/09/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SingleSectionSameItemsViewController: UIViewController {
+class ContactViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class SingleSectionSameItemsViewController: UIViewController {
     }
 }
 
-extension SingleSectionSameItemsViewController: UITableViewDataSource {
+extension ContactViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -33,7 +33,7 @@ extension SingleSectionSameItemsViewController: UITableViewDataSource {
     }
 }
 
-extension SingleSectionSameItemsViewController: UITableViewDelegate {
+extension ContactViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }

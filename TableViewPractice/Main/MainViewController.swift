@@ -55,8 +55,8 @@ extension MainViewController: UITableViewDelegate {
         
         switch (kind.sectionType, kind.itemType) {
         case (TableKind.SectionType.single, TableKind.ItemType.same):
-            let storyboard = UIStoryboard(name: "SingleSection", bundle: nil)
-            vc = storyboard.instantiateViewController(withIdentifier: "SingleSectionSameItemsViewController")
+            let storyboard = UIStoryboard(name: "Contact", bundle: nil)
+            vc = storyboard.instantiateViewController(withIdentifier: "ContactViewController")
             
         case (TableKind.SectionType.multiple, TableKind.ItemType.same): return
         case (TableKind.SectionType.multiple, TableKind.ItemType.other): return

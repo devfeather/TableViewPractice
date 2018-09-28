@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Single Section Same Items View Controller-->
+        <!--Contact View Controller-->
         <scene sceneID="XdG-4L-CmK">
             <objects>
-                <viewController storyboardIdentifier="SingleSectionSameItemsViewController" id="txm-8s-3bj" customClass="SingleSectionSameItemsViewController" customModule="TableViewPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactViewController" id="txm-8s-3bj" customClass="ContactViewController" customModule="TableViewPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Cr-vL-vtZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
