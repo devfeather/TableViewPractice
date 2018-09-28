@@ -6,8 +6,8 @@
 //  Copyright © 2018 Feather. All rights reserved.
 //
 
-struct TableKind {
-    enum SectionType {
+struct TableKind: Codable {
+    enum SectionType: Int, Codable {
         case single, multiple
         var text: String {
             switch self {
@@ -17,7 +17,7 @@ struct TableKind {
         }
     }
     
-    enum ItemType {
+    enum ItemType: Int, Codable {
         case same, other
         var text: String {
             switch self {

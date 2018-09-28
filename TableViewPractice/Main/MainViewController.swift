@@ -10,17 +10,24 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    private var dataSource: [TableKind] = [TableKind(title: "Basic", sectionType: .single, itemType: .same),
-                                          TableKind(title: "Menu Table", sectionType: .multiple, itemType: .same),
-                                          TableKind(title: "Setting", sectionType: .multiple, itemType: .other)]
+    
+    private var dataSource: [TableKind] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
+        load()
     }
     
     private func registerCell() {
         tableView.register(TableKindTableViewCell.self)
+    }
+    
+    private func load() {
+        guard let dataAsset = NSDataAsset(name: "table_kind") else { return }
+        guard let response = try? JSONDecoder().decode([TableKind].self, from: dataAsset.data) else { return }
+        dataSource = response
+        tableView.reloadData()
     }
 }
 
