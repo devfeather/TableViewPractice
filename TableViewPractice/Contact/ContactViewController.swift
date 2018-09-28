@@ -10,31 +10,41 @@ import UIKit
 
 class ContactViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    private var dataSource: [Contact] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
+        load()
     }
     
     private func registerCell() {
-        tableView.register(BasicTableViewCell.self)
+        tableView.register(ContactTableViewCell.self)
+    }
+    
+    private func load() {
+        guard let dataAsset = NSDataAsset(name: "contact") else { return }
+        guard let response = try? JSONDecoder().decode([Contact].self, from: dataAsset.data) else { return }
+        dataSource = response
+        tableView.reloadData()
     }
 }
 
 extension ContactViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: BasicTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        cell.titleLabel.text = "Hello"
+        let cell: ContactTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        let contact = dataSource[indexPath.row]
+        cell.setup(contact: contact)
         return cell
     }
 }
 
 extension ContactViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        return ContactTableViewCell.height
     }
 }
