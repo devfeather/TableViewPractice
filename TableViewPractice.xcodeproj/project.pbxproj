@@ -25,6 +25,7 @@
 		30C6B16B215E07BF00E1DFB1 /* ContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C6B169215E07BF00E1DFB1 /* ContactTableViewCell.xib */; };
 		30C6B16E215E0A4800E1DFB1 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6B16D215E0A4800E1DFB1 /* Contact.swift */; };
 		30C6B170215E0ED100E1DFB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C6B16F215E0ED100E1DFB1 /* Assets.xcassets */; };
+		30C6B173215E0FF900E1DFB1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C6B172215E0FF900E1DFB1 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		30C6B169215E07BF00E1DFB1 /* ContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactTableViewCell.xib; sourceTree = "<group>"; };
 		30C6B16D215E0A4800E1DFB1 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		30C6B16F215E0ED100E1DFB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30C6B172215E0FF900E1DFB1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		301ADA56215CC4F400D7059E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				30C6B171215E0FE600E1DFB1 /* Network */,
 				302A1423215AA1D100E578DC /* View */,
 			);
 			path = Common;
@@ -183,6 +186,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		30C6B171215E0FE600E1DFB1 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				30C6B172215E0FF900E1DFB1 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C6B173215E0FF900E1DFB1 /* NetworkManager.swift in Sources */,
 				30B403C0215A619500816068 /* MainViewController.swift in Sources */,
 				301ADA52215CC0F900D7059E /* NibLoadable.swift in Sources */,
 				302A142C215AA54A00E578DC /* UITableView+Reusable.swift in Sources */,

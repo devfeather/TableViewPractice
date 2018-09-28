@@ -16,18 +16,24 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
-        load()
+        requestTableList()
     }
     
     private func registerCell() {
         tableView.register(TableKindTableViewCell.self)
     }
     
-    private func load() {
-        guard let dataAsset = NSDataAsset(name: "table_kind") else { return }
-        guard let response = try? JSONDecoder().decode([TableKind].self, from: dataAsset.data) else { return }
-        dataSource = response
-        tableView.reloadData()
+    private func requestTableList() {
+        NetworkManager.shared.requestTableList(delay: .now() + 1) { [weak self] data in
+            guard let self = self else { return }
+            guard let data = data else { return }
+            guard let response = try? JSONDecoder().decode([TableKind].self, from: data) else { return }
+            self.dataSource = response
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 

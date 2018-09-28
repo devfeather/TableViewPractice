@@ -15,18 +15,24 @@ class ContactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCell()
-        load()
+        requestContactList()
     }
     
     private func registerCell() {
         tableView.register(ContactTableViewCell.self)
     }
     
-    private func load() {
-        guard let dataAsset = NSDataAsset(name: "contact") else { return }
-        guard let response = try? JSONDecoder().decode([Contact].self, from: dataAsset.data) else { return }
-        dataSource = response
-        tableView.reloadData()
+    private func requestContactList() {
+        NetworkManager.shared.requestContactList(delay: .now() + 1) { [weak self] data in
+            guard let self = self else { return }
+            guard let data = data else { return }
+            guard let response = try? JSONDecoder().decode([Contact].self, from: data) else { return }
+            self.dataSource = response
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 
