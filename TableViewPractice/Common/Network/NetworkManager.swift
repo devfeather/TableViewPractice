@@ -21,11 +21,13 @@ extension NetworkManager {
     enum Router {
         case tableKind
         case contact
+        case menu
         
         var path: String {
             switch self {
             case .tableKind: return "table_kind"
             case .contact: return "contact"
+            case .menu: return "menu"
             }
         }
     }
@@ -54,5 +56,9 @@ extension NetworkManager {
     
     func requestContactList(delay: DispatchTime,completion: @escaping CompletionHandler) {
         request(router: .contact, delay: delay, completion: completion)
+    }
+    
+    func requestMenuList(delay: DispatchTime,completion: @escaping CompletionHandler) {
+        request(router: .menu, delay: delay, completion: completion)
     }
 }

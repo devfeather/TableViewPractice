@@ -1,0 +1,65 @@
+[
+   {
+      "menu":"COFFEE",
+      "items":[
+         {
+            "title":"에스프레소",
+            "price":3000
+         },
+         {
+            "title":"아메리카노",
+            "price":3000
+         },
+         {
+            "title":"카페모카",
+            "price":3500
+         },
+         {
+            "title":"카라멜 마끼아또",
+            "price":4000
+         }
+      ]
+   },
+   {
+      "menu":"LATTE & TEA",
+      "items":[
+         {
+            "title":"카페라떼",
+            "price":3500
+         },
+         {
+            "title":"카라멜라떼",
+            "price":4000
+         },
+         {
+            "title":"바닐라라떼",
+            "price":4000
+         },
+         {
+            "title":"녹차/홍차",
+            "price":3500
+         },
+         {
+            "title":"아이스티",
+            "price":3000
+         }
+      ]
+   },
+   {
+      "menu":"DESSERT",
+      "items":[
+         {
+            "title":"치즈 베이글",
+            "price":2500
+         },
+         {
+            "title":"조각 케이크",
+            "price":4500
+         },
+         {
+            "title":"옛날 빙수",
+            "price":5000
+         }
+      ]
+   }
+]
