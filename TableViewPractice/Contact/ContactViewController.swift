@@ -23,7 +23,7 @@ class ContactViewController: UIViewController {
     }
     
     private func requestContactList() {
-        NetworkManager.shared.requestContactList(delay: .now() + 1) { [weak self] data in
+        NetworkManager.shared.requestContactList(delay: .now() + 0) { [weak self] data in
             guard let self = self else { return }
             guard let data = data else { return }
             guard let response = try? JSONDecoder().decode([Contact].self, from: data) else { return }
