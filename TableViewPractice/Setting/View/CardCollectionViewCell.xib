@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCollectionViewCell" id="gTV-IL-0wX" customClass="CardCollectionViewCell" customModule="TableViewPractice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6K5-TI-QUG" userLabel="Card Frame View">
+                        <rect key="frame" x="30" y="21.5" width="315" height="157.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhy-NN-xIS">
+                                <rect key="frame" x="30" y="25" width="127" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaR-lz-X8x" userLabel="Underline View">
+                                <rect key="frame" x="30" y="60" width="147" height="2"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="MUY-MW-QXb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PaR-lz-X8x" firstAttribute="top" secondItem="rhy-NN-xIS" secondAttribute="bottom" constant="5" id="9ag-oY-caE"/>
+                            <constraint firstItem="PaR-lz-X8x" firstAttribute="leading" secondItem="rhy-NN-xIS" secondAttribute="leading" id="MTv-kc-QUw"/>
+                            <constraint firstItem="PaR-lz-X8x" firstAttribute="width" secondItem="rhy-NN-xIS" secondAttribute="width" constant="20" id="d4D-pc-H1U"/>
+                            <constraint firstItem="rhy-NN-xIS" firstAttribute="leading" secondItem="6K5-TI-QUG" secondAttribute="leading" constant="30" id="lFg-ez-xZs"/>
+                            <constraint firstItem="rhy-NN-xIS" firstAttribute="top" secondItem="6K5-TI-QUG" secondAttribute="top" constant="25" id="oWF-6b-WJ3"/>
+                            <constraint firstAttribute="width" secondItem="6K5-TI-QUG" secondAttribute="height" multiplier="2:1" priority="250" id="pld-UE-W5Z"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6K5-TI-QUG" secondAttribute="trailing" constant="30" id="4bi-iL-bEq"/>
+                <constraint firstItem="6K5-TI-QUG" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Jf7-Vr-8yH"/>
+                <constraint firstItem="6K5-TI-QUG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="MKG-dk-pJ9"/>
+                <constraint firstItem="6K5-TI-QUG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="m7b-FQ-ixb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="cardFrameView" destination="6K5-TI-QUG" id="ken-jN-a1Z"/>
+                <outlet property="cardNameLabel" destination="rhy-NN-xIS" id="Jlq-Y8-gR9"/>
+            </connections>
+            <point key="canvasLocation" x="53.600000000000001" y="48.575712143928037"/>
+        </collectionViewCell>
+    </objects>
+</document>

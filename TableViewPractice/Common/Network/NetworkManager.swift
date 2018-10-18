@@ -22,12 +22,14 @@ extension NetworkManager {
         case tableKind
         case contact
         case menu
+        case setting
         
         var path: String {
             switch self {
             case .tableKind: return "table_kind"
             case .contact: return "contact"
             case .menu: return "menu"
+            case .setting: return "setting"
             }
         }
     }
@@ -60,5 +62,9 @@ extension NetworkManager {
     
     func requestMenuList(delay: DispatchTime,completion: @escaping CompletionHandler) {
         request(router: .menu, delay: delay, completion: completion)
+    }
+    
+    func requestSettingList(delay: DispatchTime,completion: @escaping CompletionHandler) {
+        request(router: .setting, delay: delay, completion: completion)
     }
 }

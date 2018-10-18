@@ -68,7 +68,9 @@ extension MainViewController: UITableViewDelegate {
             let storyboard = UIStoryboard(name: "Menu", bundle: nil)
             vc = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
             
-        case (TableKind.SectionType.multiple, TableKind.ItemType.other): return
+        case (TableKind.SectionType.multiple, TableKind.ItemType.other):
+            let storyboard = UIStoryboard(name: "Setting", bundle: nil)
+            vc = storyboard.instantiateViewController(withIdentifier: "SettingViewController")
             
         default: return
         }
